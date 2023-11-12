@@ -20,8 +20,42 @@ const checkTime = (currentHour?: number) => {
   
   console.log(`In the time zone ${currentTimeZone}, it is currently ${timeOfDay}.`);
 
-  export const formatDateToMonthDay = (date: any) => {
-    const options = { day: "numeric", month: "long", year: "numeric" };
-    const formattedDate = new Date(date).toLocaleDateString(undefined, options);
-    return formattedDate.replace(/(\d+)(st|nd|rd|th)/, "$1<sup>$2</sup>");
-};
+  const getCurrentDateFormatted = (): string => {
+    const options: Intl.DateTimeFormatOptions = {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    };
+  
+    const currentDate = new Date();
+    const dateFormatter = new Intl.DateTimeFormat('en-US', options);
+  
+    const formattedDate = dateFormatter.format(currentDate);
+  
+    // Add the ordinal suffix to the day
+    const dayWithSuffix = addOrdinalSuffix(currentDate.getDate());
+  
+    return `it's ${formattedDate.replace(/(\d+)/, dayWithSuffix)}`;
+  };
+  
+  // Function to add ordinal suffix to a number
+  const addOrdinalSuffix = (num: number): string => {
+    const j = num % 10;
+    const k = num % 100;
+    if (j === 1 && k !== 11) {
+      return num + 'st';
+    }
+    if (j === 2 && k !== 12) {
+      return num + 'nd';
+    }
+    if (j === 3 && k !== 13) {
+      return num + 'rd';
+    }
+    return num + 'th';
+  };
+  
+  // Example usage
+  export const formattedDate = getCurrentDateFormatted();
+  console.log(formattedDate);
+  
