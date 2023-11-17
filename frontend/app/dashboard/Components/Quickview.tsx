@@ -12,17 +12,17 @@ const smallDivs = [
 const Quickview = ({user, dark}: any) => {
     return (
         <>
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full ">
                 <section className="space-y-2">
                     <section className="flex items-center space-x-5">
-                        <h2 className="text-slate-700 dark:text-white text-3xl font-secondary">Good {timeOfDay}, {user}</h2>
-                        <img src="/assets/wave.svg" alt="waving hand" className="w-12 h-12" />
+                        <h2 className="text-slate-700 dark:text-white text-3xl font-secondary lg:text-2xl">Good {timeOfDay}, {user}</h2>
+                        <img src="/assets/wave.svg" alt="waving hand" className="w-12 h-12 lg:w-8 lg:h-8" />
                     </section>
                     <p className="text-slate-700 text-base font-primary dark:text-white">
                         {formattedDate}
                     </p>
                 </section>
-                <section className="flex items-center space-x-2">
+                <section className="flex items-center space-x-2 lg:hidden">
                     {smallDivs.map((item)=>(
                         <section key={item.id} className="w-8 h-8 flex items-center rounded-md bg-neutral-100 dark:bg-slate-900">
                             {item.id === 1 

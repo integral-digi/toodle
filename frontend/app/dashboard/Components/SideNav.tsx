@@ -7,7 +7,7 @@ import SwitchIcon from "@/public/assets/SwitchIcon";
 import GrabberIcon from "@/public/assets/GrabberIcon";
 
 const SideNav = () => {
-  const [isActive, setIsActive] = useState<number | null>(null); 
+  const [isActive, setIsActive] = useState<number | null>(1); 
 
   const handleActive = (id: number) => {
     // Toggle the active state
@@ -25,7 +25,7 @@ const SideNav = () => {
 
   return (
     <>
-      <div className="w-96 min-h-screen bg-neutral-100 dark:bg-slate-900">
+      <div className="w-96 min-h-full h-screen bg-neutral-100 dark:bg-slate-900">
         <section className="space-y-12 px-12">
           <section className="flex items-center justify-between pt-8">
             <section className="w-40 h-14">
@@ -43,7 +43,7 @@ const SideNav = () => {
                   <section
                     key={item.id}
                     className={`${
-                      isActive === item.id ? "flex items-center justify-between px-2 h-10 bg-gray-300 bg-opacity-50 rounded-md" : "flex items-center justify-between pl-2" 
+                      isActive === item.id ? "flex items-center cursor-pointer justify-between px-2 h-10 bg-gray-300 bg-opacity-50 rounded-md" : "flex items-center cursor-pointer justify-between pl-2" 
                     }`}
                     onClick={() => handleActive(item.id)}
                   >
