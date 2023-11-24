@@ -8,8 +8,6 @@ interface ColumnProps {
     title: string;
     links: LinkProps[];
 }
-
-
 export const columns: ColumnProps[] = [
     {
         id: 1,

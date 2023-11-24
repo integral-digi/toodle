@@ -22,8 +22,8 @@ const DashHome = () => {
     }
     return (
         <main className="w-full h-full min-h-screen bg-white dark:bg-[#001523] relative">
-            <div className="flex">
-                <section className="w-1/4 lg:hidden">
+            <div className="flex h-full">
+                <section className="w-1/4 h-full pb-28 lg:hidden">
                     <SideNav />
                 </section>
                 <section className="w-3/4 py-8 flex lg:w-full justify-center px-20 lg:px-8">

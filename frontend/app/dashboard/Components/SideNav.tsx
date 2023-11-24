@@ -25,7 +25,7 @@ const SideNav = () => {
 
   return (
     <>
-      <div className="w-96 min-h-full h-screen bg-neutral-100 dark:bg-slate-900">
+      <div className="w-96 h-full min-h-screen bg-neutral-100 dark:bg-slate-900">
         <section className="space-y-12 px-12">
           <section className="flex items-center justify-between pt-8">
             <section className="w-40 h-14">
