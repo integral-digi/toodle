@@ -9,7 +9,7 @@ import TaskLayout from "./Components/TaskLayout";
 
 const authUser: string = "Integral";
 
-const DashHome = () => {
+const Dash = () => {
     const [isOpen, setIsOpen] = useState(false);
     const openModal = () => {
         setIsOpen(!isOpen);
@@ -40,4 +40,4 @@ const DashHome = () => {
     )
 }
 
-export default DashHome;
+export default Dash;
