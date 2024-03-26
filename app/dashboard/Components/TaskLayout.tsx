@@ -6,19 +6,22 @@ import Draggable from "react-draggable";
 import { Popover, Transition } from "@headlessui/react";
 import MorePanel from "./MorePanel";
 
-const TaskLayout = () => {
-  const [checkedTasks, setCheckedTasks] = useState([]);
+// Define the type for the task ID
+type TaskId = string | number; // Adjust the type according to your task ID type
 
-  const handleCheck = (taskId: any) => {
-    setCheckedTasks((prevCheckedTasks: any) => {
+const TaskLayout = () => {
+  const [checkedTasks, setCheckedTasks] = useState<TaskId[]>([]); // Specify TaskId[] type here
+
+  const handleCheck = (taskId: TaskId) => {
+    setCheckedTasks((prevCheckedTasks) => {
       if (prevCheckedTasks.includes(taskId)) {
-        return prevCheckedTasks.filter((id: any) => id !== taskId);
+        return prevCheckedTasks.filter((id) => id !== taskId);
       } else {
         return [...prevCheckedTasks, taskId];
       }
     });
   };
-
+  
   return (
     <div className="space-y-12 w-full">
       {taskCategories.map((category) => (

@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 
 interface Task {
-  taskId: number;
+  taskId: any;
   dueDate: string;
   title: string;
   about: string;
