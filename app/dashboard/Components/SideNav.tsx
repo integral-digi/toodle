@@ -2,9 +2,8 @@
 import { useState } from "react";
 import { taskCategories } from "./Tasks";
 import Logo from "@/public/assets/Logo";
-import PlusIcon from "@/public/assets/PlusIcon";
-import SwitchIcon from "@/public/assets/SwitchIcon";
-import GrabberIcon from "@/public/assets/GrabberIcon";
+import { ArrowsRightLeftIcon, Bars3Icon } from "@heroicons/react/16/solid";
+import { PlusIcon } from "@heroicons/react/16/solid";
 
 const SideNav = () => {
   const [isActive, setIsActive] = useState<number | null>(1); 
@@ -25,14 +24,14 @@ const SideNav = () => {
 
   return (
     <>
-      <div className="w-96 h-full min-h-screen bg-neutral-100 dark:bg-slate-900">
+      <div className="w-96 h-full min-h-screen bg-neutral-100 dark:bg-slate-900 fixed overflow-y-scroll will-change-scroll">
         <section className="space-y-12 px-12">
           <section className="flex items-center justify-between pt-8">
             <section className="w-40 h-14">
               <Logo />
             </section>
             <section className="w-8 h-8">
-              <SwitchIcon />
+              <ArrowsRightLeftIcon className="dark:text-white text-slate-700 w-8 h-8" />
             </section>
           </section>
           <section className="space-y-8">
@@ -48,7 +47,7 @@ const SideNav = () => {
                     onClick={() => handleActive(item.id)}
                   >
                     <section className="flex items-center space-x-3">
-                      <GrabberIcon />
+                      <Bars3Icon className="dark:text-white text-slate-700 w-4 h-4" />
                       {item.icon}
                       <p className="text-slate-700 dark:text-white text-lg font-primary">
                         {item.name}
@@ -64,7 +63,7 @@ const SideNav = () => {
               </section>
               <section className="flex items-center justify-between">
                 <section className="flex items-center space-x-3">
-                  <PlusIcon />
+                  <PlusIcon className="dark:text-white text-slate-700 w-4 h-4" />
                   <p className="text-slate-700 dark:text-white text-lg font-primary">
                     Create new list
                   </p>

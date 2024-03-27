@@ -1,4 +1,5 @@
-import PlusIcon from "@/public/assets/PlusIcon";
+import { PlusIcon } from "@heroicons/react/16/solid";
+
 
 const commandItems = [
     { id: 1, name: "command", icon: "/assets/Vector.svg" },
@@ -11,11 +12,11 @@ const AddTask = ({openModal}: any) => {
             <div className="w-full h-16 bg-neutral-100 dark:bg-slate-900 rounded-lg border border-gray-300 border-dashed px-6 py-4 cursor-pointer" onClick={openModal}>
                 <section className="flex items-center justify-between ">
                     <section className="flex items-center space-x-11">
-                        <PlusIcon />
+                        <PlusIcon className="w-4 h-4 dark:text-white text-slate-700" />
                         <p className="text-slate-700 text-lg font-primary dark:text-white   md:text-base">New Task</p>
                     </section>
                     <section className="flex items-center space-x-2">
-                        {commandItems.map((item) => (
+                        {commandItems.map((item) => ( 
                             <section key={item.id} className="flex items-center rounded-md bg-white w-6 h-6">
                                 <img className="w-3 h-3 mx-auto" src={item.icon} alt={item.name} />
                             </section>

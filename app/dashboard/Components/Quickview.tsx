@@ -1,12 +1,12 @@
 import GridIcon from "@/public/assets/GridIcon";
 import { timeOfDay, formattedDate } from "./time";
-import BoltIcon from "@/public/assets/BoltIcon";
 import DarkToggle from "@/public/assets/DarkToggle";
+import { BoltIcon, MoonIcon, Square2StackIcon, Squares2X2Icon } from "@heroicons/react/16/solid";
 
 const smallDivs = [
-    { id: 1, name: <DarkToggle /> }, 
-    { id: 2, name: <BoltIcon /> }, 
-    { id: 3, name: <GridIcon /> }
+    { id: 1, name: <MoonIcon className="dark:text-white text-slate-700 w-4 h-4" /> }, 
+    { id: 2, name: <BoltIcon className="dark:text-white text-slate-700 w-4 h-4" /> }, 
+    { id: 3, name: <Squares2X2Icon className="dark:text-white text-slate-700 w-4 h-4" />  }
 ]
 
 const Quickview = ({user, dark}: any) => {

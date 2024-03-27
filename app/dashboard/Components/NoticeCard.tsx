@@ -1,5 +1,6 @@
 "use client"
 import CloseIcon from "@/public/assets/CloseIcon";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 
 const message: string = "Welcome aboard! We're thrilled to have you on board our project planner journey! Get ready to transform your ideas into reality. Navigate through tasks, conquer milestones, and watch your projects soar to new heights. Let's turn your plans into achievements!";
@@ -21,7 +22,7 @@ const NoticeCard = () => {
           </section>
         </section>
         <section className="absolute bg-white dark:bg-slate-700 flex items-center p-1 rounded-full shadow-md -top-2 right-0 w-6 h-6 cursor-pointer" onClick={handleClick}>
-          <CloseIcon />
+          <XMarkIcon className="w-4 h-4 dark:text-white text-slate-700" />
         </section>
       </div>
     </>

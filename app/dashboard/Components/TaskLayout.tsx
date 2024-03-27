@@ -1,10 +1,10 @@
 "use client"
 import { Fragment, useState } from "react";
-import GrabberIcon from "@/public/assets/GrabberIcon";
 import { taskCategories } from "./Tasks";
 import Draggable from "react-draggable";
 import { Popover, Transition } from "@headlessui/react";
 import MorePanel from "./MorePanel";
+import { Bars3Icon } from "@heroicons/react/16/solid";
 
 // Define the type for the task ID
 type TaskId = string | number; // Adjust the type according to your task ID type
@@ -34,7 +34,7 @@ const TaskLayout = () => {
                   className={`px-2 flex items-center justify-between w-full lg:items-start ${checkedTasks.includes(task.taskId) ? "h-max py-2 bg-neutral-100 dark:bg-slate-900 rounded-lg" : ""}`}
                 >
                   <section className="flex items-center space-x-4">
-                    <GrabberIcon />
+                    <Bars3Icon className="w-4 h-4 dark:text-white text-slate-700" />
                     <input
                       type="checkbox"
                       onChange={() => handleCheck(task.taskId)}
@@ -55,7 +55,7 @@ const TaskLayout = () => {
                         </section>
                       ))}
                     </section>
-                    <section className="flex items-center justify-center py-1 px-2 font-primary bg-orange-200 rounded-xl">
+                    <section className="flex items-center justify-center py-1 px-2 font-primary bg-orange-200 rounded-3xl">
                       {task.dueDate}
                     </section>
                     <Popover className="relative">

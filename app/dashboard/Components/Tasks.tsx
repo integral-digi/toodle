@@ -1,5 +1,4 @@
-import HomeIcon from "@/public/assets/HomeIcon";
-import PremiumIcon from "@/public/assets/PremiumIcon";
+import { HomeIcon, SparklesIcon } from "@heroicons/react/16/solid";
 import { ReactNode } from "react"; 
 
 
@@ -25,7 +24,7 @@ export const taskCategories: TaskCategory[] = [
     id: 1,
     name: "Home",
     description: "default toodle category",
-    icon: <HomeIcon />,
+    icon: <HomeIcon className="dark:text-white text-slate-700 w-4 h-4" />,
     tasks: [
       { taskId: 1, dueDate: "today", title: "Design the homepage and withdrawal page", about: "Random description", collaborator: ["Charles"], completed: false }
     ]
@@ -34,7 +33,7 @@ export const taskCategories: TaskCategory[] = [
     id: 2,
     name: "Test-Ace",
     description: "Test Ace web app design & development",
-    icon: <PremiumIcon />,
+    icon: <SparklesIcon className="dark:text-white text-slate-700 w-4 h-4" />,
     tasks: [
       { taskId: 11, dueDate: "tomorrow", title: "Meditate or do yoga. Take some time to relax and de-stress", about: "Random description", collaborator: ["Ben", "Omor"], completed: false },
       { taskId: 2, dueDate: "tomorrow", title: "Take a tour of the neighbourhood", about: "Random description", collaborator: ["Ben"], completed: false }

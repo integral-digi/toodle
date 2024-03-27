@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Combobox } from "@headlessui/react";
 import { taskCategories } from "./Tasks";
-import ChevronUpDown from "@/public/assets/ChevronUpDown";
+import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 
 const pStyle: string = "text-slate-700 dark:text-white text-base font-primary";
 const sectionStyle: string = "space-y-3";
@@ -36,7 +36,7 @@ const TaskForm = () => {
                         placeholder="Select Task List"
                     />
                     <Combobox.Button className="absolute top-4 right-4">
-                        <ChevronUpDown />
+                        <ChevronUpDownIcon className="dark:text-white text-slate-700 w-4 h-4"/>
                     </Combobox.Button>
               </section>
               <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
