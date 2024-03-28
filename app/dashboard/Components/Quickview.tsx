@@ -1,7 +1,5 @@
-import GridIcon from "@/public/assets/GridIcon";
 import { timeOfDay, formattedDate } from "./time";
-import DarkToggle from "@/public/assets/DarkToggle";
-import { BoltIcon, MoonIcon, Square2StackIcon, Squares2X2Icon } from "@heroicons/react/16/solid";
+import { BoltIcon, MoonIcon, Squares2X2Icon } from "@heroicons/react/16/solid";
 
 const smallDivs = [
     { id: 1, name: <MoonIcon className="dark:text-white text-slate-700 w-4 h-4" /> }, 

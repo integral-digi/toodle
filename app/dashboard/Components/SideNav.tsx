@@ -4,8 +4,10 @@ import { taskCategories } from "./Tasks";
 import Logo from "@/public/assets/Logo";
 import { ArrowsRightLeftIcon, Bars3Icon } from "@heroicons/react/16/solid";
 import { PlusIcon } from "@heroicons/react/16/solid";
+import Image from "next/image";
+import LogoWhite from "@/public/assets/LogoWhite";
 
-const SideNav = () => {
+const SideNav = ({isDark}: any) => {
   const [isActive, setIsActive] = useState<number | null>(1); 
 
   const handleActive = (id: number) => {
@@ -27,8 +29,8 @@ const SideNav = () => {
       <div className="w-96 h-full min-h-screen bg-neutral-100 dark:bg-slate-900 fixed overflow-y-scroll will-change-scroll">
         <section className="space-y-12 px-12">
           <section className="flex items-center justify-between pt-8">
-            <section className="w-40 h-14">
-              <Logo />
+            <section className="w-28 h-8">
+              {!isDark ? <LogoWhite /> : <Logo />}
             </section>
             <section className="w-8 h-8">
               <ArrowsRightLeftIcon className="dark:text-white text-slate-700 w-8 h-8" />
