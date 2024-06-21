@@ -34,7 +34,7 @@ const TaskPopup = ({isOpen, setIsOpen}: any) => {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel 
-                className="px-8 pt-1 pb-6 space-y-12 backdrop-blur-2xl max-w-2xl z-50 bg-white dark:bg-[#001523] rounded-2xl">
+                className="w-full px-8 pt-1 pb-6 space-y-12 backdrop-blur-2xl max-w-6xl z-50 bg-white dark:bg-[#001523] rounded-2xl">
                 <div 
                   className="w-6 h-6 cursor-pointer absolute top-12 right-8" 
                   onClick={()=> setIsOpen(false)}
